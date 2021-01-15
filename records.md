@@ -1,3 +1,4 @@
+ARM v7-M Architecture Reference Manual  
 # Mode, privilege and stack pointer are key concepts used in ARMv7-M.
 ## Mode
 An M-profile processor supports two operating modes:  
@@ -12,4 +13,9 @@ Stack pointer The processor implements a banked pair of stack pointers, the Main
 stack pointer. See *The SP registers on page B1-516* for more information.
 In Handler mode, the processor uses the Main stack pointer. In Thread mode it can use either stack
 pointer.
+
+## ARMv7-M and interworking support
+Thumb interworking is held as bit [0] of an interworking address. Interworking addresses are used in the following instructions:
+* BX or BLX.
+* an LDR or LDM that loads the PC.
 
